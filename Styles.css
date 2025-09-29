@@ -1,0 +1,375 @@
+/* Fonts and Colors */
+:root {
+  --pink: #f7c8d3;
+  --purple: #b084cc;
+  --gold: #e1b12c;
+  --nude: #f6e5d3;
+  --white: #ffffff;
+  --text-dark: #333;
+  --font-heading: 'Great Vibes', cursive;
+  --font-body: 'Poppins', sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: var(--nude);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--purple);
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--purple);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(176, 132, 204, 0.6), rgba(247, 200, 211, 0.6)),
+    url('/9e8c1fcdb0986d84dc554860f82743ad.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 60px;
+  color: var(--white);
+  animation: fadeIn 2s ease;
+}
+
+.hero p {
+  font-size: 20px;
+  color: var(--white);
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--purple);
+  color: var(--white);
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--gold);
+  transform: scale(1.05);
+}
+
+/* About */
+.about {
+  padding: 80px 50px;
+  background: var(--pink);
+  text-align: center;
+}
+
+.about h2 {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+/* Services */
+.services {
+  padding: 80px 50px;
+  background: var(--white);
+  text-align: center;
+}
+
+.services h2 {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  background: var(--nude);
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  background: var(--pink);
+}
+
+/* Portfolio */
+.portfolio {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+.more-images {
+  display: none;
+}
+
+/* Button styling same as earlier */
+#seeMoreBtn {
+  margin-top: 20px;
+}
+/* Reviews */
+.reviews {
+  padding: 80px 50px;
+  background: var(--nude);
+  text-align: center;
+}
+
+.review-box {
+  margin: 15px auto;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+.more-reviews {
+  display: none;
+}
+
+#seeMoreReviewsBtn {
+  margin-top: 20px;
+}
+
+/* Contact */
+.contact {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.social {
+  margin-top: 20px;
+}
+
+.social a {
+  color: var(--purple);
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social a:hover {
+  color: var(--gold);
+}
+
+/* Footer */
+footer {
+  padding: 15px;
+  background: var(--pink);
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .nav-links {
+    display: none; /* Later can add toggle menu */
+  }
+
+  .service-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 45px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: var(--nude);
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 26px;
+    color: var(--purple);
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 36px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* About, Services, Portfolio, Contact */
+  .about, .services, .portfolio, .reviews, .contact {
+    padding: 50px 20px;
+  }
+
+  .service-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hero */
+  .hero h1 {
+    font-size: 28px;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  /* Section Headings */
+  .about h2, .services h2, .portfolio h2, .reviews h2, .contact h2 {
+    font-size: 28px;
+  }
+
+  .service-card {
+    width: 90%;
+  }
+}
+/* Default: hide hamburger */
+.hamburger {
+  display: none;
+}
+
+/* Show hamburger only on small screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 28px;
+    color: var(--purple);
+  }
+
+  /* Hide nav links until hamburger is clicked */
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nail Art Portfolio |Hemanti Awasti </title>
+<link rel="stylesheet" href="Styles.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("prakashu788@gmail.com"); 
+  })();
+</script>
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="hamburger">☰</div>
+
+      <div class="logo">Hemu<span>Art</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Elegance at Your Fingertips</h1>
+      <p>Transforming Nails into Art</p>
+      <a href="#contact" class="btn">Book Now</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About Me</h2>
+<p>
+  Hello! I am Hemanti Awasti, a passionate nail artist specializing in creative and elegant nail designs. 
+  With a love for beauty and detail, I bring out the art in every nail. 
+  From minimal everyday looks to glamorous party-ready styles, I ensure each design reflects personality and confidence. 
+  My goal is to make every client feel unique, polished, and beautiful through customized nail artistry.
+</p>
+
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>Services</h2>
+    <div class="service-container">
+      <div class="service-card">
+        <h3>Gel Nail Art</h3>
+        <p>Trendy designs with long-lasting shine.</p>
+      </div>
+      <div class="service-card">
+        <h3>Bridal Nails</h3>
+        <p>Special designs for your big day.</p>
+      </div>
+      <div class="service-card">
+        <h3>Extensions</h3>
+        <p>Beautiful extensions with natural look.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio">
+  <h2>My Works</h2>
+  <div class="gallery">
+    <!-- First visible images -->
+    <img src="/Gelnail.jpg" alt="Nail Art 1">
+    <img src="/9e8c1fcdb0986d84dc554860f82743ad.jpg" alt="Nail Art 2">
+    <img src="/art2.png" alt="Nail Art 3">
+    <img src="/Gelnail.jpg" alt="Nail Art 4">
+
+    <!-- Hidden images -->
+    <div class="more-images">
+      <img src="/art2.png" alt="Nail Art 5">
+      <img src="images/nail6.jpg" alt="Nail Art 6">
+      <img src="images/nail7.jpg" alt="Nail Art 7">
+      <img src="images/nail8.jpg" alt="Nail Art 8">
+    </div>
+  </div>
+
+  <!-- See More Button -->
+  <button id="seeMoreBtn" class="btn">See More</button>
+</section>
+
+
+  <!-- Reviews -->
+  <section id="reviews" class="reviews">
+  <h2>Customer Reviews</h2>
+  
+  <!-- First 2 visible reviews -->
+  <div class="review-box">
+    <p>"Absolutely loved my nails! Professional and creative work." – Hemanti </p>
+  </div>
+  <div class="review-box">
+    <p>"Best nail art experience ever, highly recommended!" – Bhawana</p>
+  </div>
+
+  <!-- Hidden reviews -->
+  <div class="more-reviews">
+    <div class="review-box">
+      <p>"I love your your art" – Prakash</p>
+    </div>
+    <!-- You can add more reviews here later -->
+  </div>
+
+  <!-- See More Button -->
+  <button id="seeMoreReviewsBtn" class="btn">See More</button>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit" class="btn">Send Message</button>
+</form>
+
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    emailjs.sendForm("your_service_id", "your_template_id", this)
+      .then(() => {
+        alert("Message sent successfully!");
+      }, (error) => {
+        alert("Failed to send message: " + error);
+      });
+  });
+</script>
+
+    <div class="social">
+      <a href="https://www.instagram.com/hemmu_awasthi/?hl=en">Instagram</a> | <a href="https://www.facebook.com/genious.prakash.7">Facebook</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Nail Art Portfolio | Designed with 💖</p>
+  </footer>
+<script>
+  const seeMoreBtn = document.getElementById("seeMoreBtn");
+  const moreImages = document.querySelector(".more-images");
+
+  seeMoreBtn.addEventListener("click", () => {
+    if (moreImages.style.display === "block") {
+      moreImages.style.display = "none";
+      seeMoreBtn.textContent = "See More";
+    } else {
+      moreImages.style.display = "block";
+      seeMoreBtn.textContent = "See Less";
+    }
+  });
+</script>
+<script>
+  const seeMoreReviewsBtn = document.getElementById("seeMoreReviewsBtn");
+  const moreReviews = document.querySelector(".more-reviews");
+
+  seeMoreReviewsBtn.addEventListener("click", () => {
+    if (moreReviews.style.display === "block") {
+      moreReviews.style.display = "none";
+      seeMoreReviewsBtn.textContent = "See More";
+    } else {
+      moreReviews.style.display = "block";
+      seeMoreReviewsBtn.textContent = "See Less";
+    }
+  });
+</script>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
